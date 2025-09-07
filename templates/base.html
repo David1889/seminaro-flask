@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titulo %}CRUD Videojuegos{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>{% block encabezado %}{% endblock %}</h1>
+        {% block contenido %}{% endblock %}
+    </div>
+</body>
+</html>

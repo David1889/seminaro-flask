@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block titulo %}Nuevo Puntaje{% endblock %}
+{% block encabezado %}Agregar Puntaje{% endblock %}
+
+{% block contenido %}
+<form method="POST" class="formulario">
+    <label>Tu Nombre</label>
+    <input type="text" name="usuario" required>
+
+    <label>Estrellas (1-5)</label>
+        <div class="estrellas">
+            <input type="radio" id="estrella5" name="estrellas" value="5">
+            <label for="estrella5">★</label>
+            <input type="radio" id="estrella4" name="estrellas" value="4">
+            <label for="estrella4">★</label>
+            <input type="radio" id="estrella3" name="estrellas" value="3">
+            <label for="estrella3">★</label>
+            <input type="radio" id="estrella2" name="estrellas" value="2">
+            <label for="estrella2">★</label>
+            <input type="radio" id="estrella1" name="estrellas" value="1">
+            <label for="estrella1">★</label>
+        </div>
+
+    <label>Descripción (opcional)</label>
+    <textarea name="descripcion"></textarea>
+
+    <button type="submit" class="btn">Guardar</button>
+</form>
+<a href="{{ url_for('juegos_detalle', id=juego_id) }}" class="btn btn-volver">⬅️ Volver</a>
+{% endblock %}

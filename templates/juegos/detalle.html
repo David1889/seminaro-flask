@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block titulo %}Detalle{% endblock %}
+{% block encabezado %}{{ juego[1] }}{% endblock %}
+
+{% block contenido %}
+<p><strong>Género:</strong> {{ juego[2] }}</p>
+<p><strong>Desarrollador:</strong> {{ juego[3] }}</p>
+<p><strong>Promedio:</strong> {{ promedio if promedio else "N/A" }} ⭐</p>
+
+<h2>Puntajes</h2>
+<a href="{{ url_for('puntajes_crear', juego_id=juego[0]) }}" class="btn">➕ Nuevo Puntaje</a>
+<ul>
+    {% for puntaje in puntajes %}
+    <li>
+        <strong>{{ puntaje[1] }}</strong> — {{ puntaje[2] }} ⭐ <br>
+        <em>{{ puntaje[3] }}</em><br>
+        <a href="{{ url_for('puntajes_editar', id=puntaje[0]) }}" class="btn btn-editar">✏️ Editar</a>
+        <a href="{{ url_for('puntajes_eliminar', id=puntaje[0]) }}" class="btn btn-eliminar">🗑️ Eliminar</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{{ url_for('juegos_index') }}" class="btn btn-volver">⬅️ Volver</a>
+{% endblock %}

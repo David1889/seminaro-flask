@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block titulo %}Crear Juego{% endblock %}
+{% block encabezado %}Crear Nuevo Videojuego{% endblock %}
+
+{% block contenido %}
+<form method="POST" class="formulario">
+    <label>Nombre</label>
+    <input type="text" name="nombre" required>
+
+    <label>Género</label>
+    <input type="text" name="genero" required>
+
+    <label>Desarrollador</label>
+    <input type="text" name="desarrollador" required>
+
+    <button type="submit" class="btn">Guardar</button>
+</form>
+<a href="{{ url_for('juegos_index') }}" class="btn btn-volver">⬅️ Volver</a>
+{% endblock %}

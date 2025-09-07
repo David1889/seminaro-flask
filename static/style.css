@@ -1,0 +1,146 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 12px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 5px;
+    text-decoration: none;
+    background: #007bff;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.btn-editar {
+    background: #28a745;
+}
+
+.btn-editar:hover {
+    background: #1e7e34;
+}
+
+.btn-eliminar {
+    background: #dc3545;
+}
+
+.btn-eliminar:hover {
+    background: #a71d2a;
+}
+
+.btn-volver {
+    background: #6c757d;
+}
+
+.btn-volver:hover {
+    background: #5a6268;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background: #f1f3f6;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.formulario label {
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.formulario input, 
+.formulario textarea, 
+.formulario select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.formulario textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f9f9f9;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.estrellas {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+.estrellas input[type="radio"] {
+    display: none;
+}
+
+.estrellas label {
+    font-size: 28px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 0 3px;
+}
+
+.estrellas input[type="radio"]:checked ~ label,
+.estrellas label:hover,
+.estrellas label:hover ~ label {
+    color: #f5c518;
+}
